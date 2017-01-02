@@ -2,13 +2,12 @@ body {
     background-color: #121212;
     font-family: 'Dosis', sans-serif;
     font-size: 16px;
+    cursor: default;
+    line-height: 1.5em;
 }
 section {
     height: 70%;
     background-color: #121212;
-}
-section {
-    
 }
 header.section-name {
     box-sizing: border-box;
@@ -30,9 +29,19 @@ header.section-name:after {
     margin-left: 1.4vw;
     color: #63d019; 
 }
+strong {
+    color: #63d019; 
+}
 .navbar {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 0px 0px;
+}
+.navbar-toggler {
+    margin: 0.92em 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
+    font-size: 1.4em;
+    color: #fff;
 }
 .nav {
     font-size: 1.500em;
@@ -46,21 +55,21 @@ header.section-name:after {
     background-color: #63d019;
     transition: all 0.5s ease 0s;
 }
-.about {
-    background: url(/img/photo1.png) center top no-repeat;
-    background-size: 75em;
+#about {
+    background: url(/img/about-min.png) center center no-repeat;
+    background-size: auto;
     min-height: 600px;
 }
-.about header {
+#about header {
     padding-top: 100px;
 }
-.about .brand-logo img {
+#about .brand-logo img {
     display: block;
-    width: 20%;
+    width: 40%;
     min-width: 150px;
     margin: 40px auto;
 }
-.about p {
+#about p {
     text-align: justify;
     background-color: rgba(0,0,0,0.7);
     color: #fff;
@@ -89,14 +98,27 @@ header.section-name:after {
     display: flex;
 }
 .fleet-item .box figure {
-    background-color: #556;
+    background-color: #141414;
     border: 0.2em solid #000;
     margin: 0.7em;
     min-width: 220px;
-    height: 220px;
+    height: 100%;
+}
+.fleet-item .box figure img {
+    width: 100%;
+}
+.fleet-item .box figure img:not(:first-child) {
+    border-top: 0.2em solid #000;
 }
 .fleet-item ul {
-    padding: 1.5em 0 0 2.6em;
+    padding: 1.5em 1em 0 2em;
+}
+.fleet-item ul li {
+    font-weight: bold;
+}
+.fleet-item ul li p {
+    font-weight: normal;
+    text-align: justify;
 }
 .fleet-item footer {
     height: 30px;
@@ -109,54 +131,84 @@ header.section-name:after {
 .fleet .row {
     margin-top: 2em;
 }
-
+#contact .content{
+    padding: 8% 0;
+    min-height: 40vw;
+    max-height: 150vw;
+}
+#contact .col-md-6 {
+    color: #fff;
+    text-align: center; 
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+.footer {
+    text-align: center;
+}
 @media all and (min-width: 1200px) {
-    .brand-logo img {
-        width: 500px;
+    #about p {
+        padding: 2vw;
+        font-size: 1.33em;
     }
-    .about {
-        background: url(/img/photo1.png) center top no-repeat;
+    #about .brand-logo img {
+        width: 20vw;
+    }
+    #about {
         background-size: 100%;
         height: 50vw;
         max-height: 920px;
         background-color: rgba(255, 255, 255, 0);
     }
-    .about p {
-        font-size: 1.33em;
-    }
 }
 
-@media all and (max-width: 992px) {
-    
-    .about p {
-        font-size: 1em;
+@media all and (max-width: 1200px) {
+    .brand-logo img {
+        max-width: 250px;
     }
 }
 @media all and (max-width: 992px) {
+    #about p {
+        font-size: 1em;
+        margin-bottom: 1em;
+    }
     .brand-logo img {
         max-width: 250px;
     }
     .fleet-item .box figure {        
-        margin: 0.7em auto;
+        margin: 0 auto;
     }
     .fleet-item ul {
         padding: 0;
-        margin: 2em 0;
+        margin: 2em 1em;
         text-align: center;
     }
     .box {
         flex-flow: column wrap;
     }
-    .fleet .row {
+    #fleet .row {
         margin-top: 2em;
     }
 }
 @media all and (max-width: 768px) {
+    #about {
+        background-position: center center;
+        background-size: auto;
+    }
     .container .row .fleet-item {
         margin-bottom: 25px;
     }
-    .fleet .row {
+    #fleet .row {
         margin-top: 0;
+    }
+    #contact .col-md-6 img {
+        padding: 0 10vw 10vw 10vw;
     }
 }
 
