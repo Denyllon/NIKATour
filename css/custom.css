@@ -101,6 +101,7 @@ strong {
     background-color: #141414;
     border: 0.2em solid #000;
     margin: 0.7em;
+    width: 50%;
     min-width: 220px;
     height: 100%;
 }
@@ -110,15 +111,18 @@ strong {
 .fleet-item .box figure img:not(:first-child) {
     border-top: 0.2em solid #000;
 }
-.fleet-item ul {
+.fleet-item dl {
     padding: 1.5em 1em 0 2em;
 }
-.fleet-item ul li {
+.fleet-item dl dt {
     font-weight: bold;
+    list-style: none;
+    margin-bottom: 0.5em;
 }
-.fleet-item ul li p {
+.fleet-item dl dd {
     font-weight: normal;
     text-align: justify;
+    margin-bottom: 1em;
 }
 .fleet-item footer {
     height: 30px;
@@ -183,8 +187,10 @@ strong {
     }
     .fleet-item .box figure {        
         margin: 0 auto;
+        width: 100%;
+    
     }
-    .fleet-item ul {
+    .fleet-item dl {
         padding: 0;
         margin: 2em 1em;
         text-align: center;
@@ -211,4 +217,3 @@ strong {
         padding: 0 10vw 10vw 10vw;
     }
 }
-
